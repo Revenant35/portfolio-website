@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BackgroundComponent } from './background.component';
+import { PulseCardComponent } from './pulse-card.component';
 
-describe('BackgroundComponent', () => {
-  let component: BackgroundComponent;
-  let fixture: ComponentFixture<BackgroundComponent>;
+describe('PulseCardComponent', () => {
+  let component: PulseCardComponent;
+  let fixture: ComponentFixture<PulseCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BackgroundComponent]
+      imports: [PulseCardComponent]
     })
     .compileComponents();
-
-    fixture = TestBed.createComponent(BackgroundComponent);
+    
+    fixture = TestBed.createComponent(PulseCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

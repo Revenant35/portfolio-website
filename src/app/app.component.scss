@@ -5,18 +5,17 @@ $background-color: #15151f;
 $blob-color: linear-gradient(to left top, aquamarine, mediumpurple);
 
 :host {
+  position: relative;
   display: block;
   height: 100dvh;
   width: 100dvw;
-  position: relative;
   overflow: hidden;
-  z-index: -3;
   background-color: $background-color;
 }
 
 #blob {
   position: absolute;
-  z-index: -2;
+  z-index: 1;
   top: 50%;
   left: 50%;
   height: $blob-height;
@@ -32,11 +31,24 @@ $blob-color: linear-gradient(to left top, aquamarine, mediumpurple);
 }
 
 #blur {
+  position: absolute;
   height: 100%;
   width: 100%;
-  position: absolute;
-  z-index: -1;
+  z-index: 2;
   backdrop-filter: blur($blur-radius);
+}
+
+#scrollable-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  z-index: 3;
+}
+
+app-pulse-card {
+  //opacity: 0;
+  margin: 2rem;
 }
 
 @keyframes pulse {
